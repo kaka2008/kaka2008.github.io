@@ -67,7 +67,7 @@ header-img: "img/wyx.jpeg"
         var now = new Date();
         var today = now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate();
         var dayDiff = timeFn("2019-01-17 02:25:00");
-        var result = "今天是"+today+"，是卫禹心出生第"+dayDiff+"天";
+        var result = "今天是"+today+"，是卫禹心出生第<b>"+dayDiff+"</b>天";
         console.log(result);
         document.getElementById("show_p").innerHTML = result;
     }

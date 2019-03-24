@@ -1,7 +1,23 @@
+---
+layout: page
+title: "About"
+description: "Hey, I am kaka2008"
+header-img: "img/wyx.jpeg"
+---
+
+<!-- Language Selector -->
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select> -->
+
+<!-- Chinese Version -->
 <div class="zh post-container">
 
     <!--copied from markdown -->
-    <p>Hey，我是<strong>kaka2008</strong>，一只码农，现在武汉工作，曾经在北京待过5年。</p>
+    
+
+    <p>Hey，我是<strong>Kaka2008</strong>，一只工程师，现在武汉工作，曾经在北京工作5年。</p>
 
     <p></p>
     
@@ -9,10 +25,70 @@
 
     <ul>
         <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="https://twitter.com">twitter</a></li>
-        <li><a href="http://www.chinagazelle.cn">chinagazelle</a></li> 
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://www.douban.com/people/weizhankui/">豆瓣</a></li> 
+        <li><a href="https://www.zhihu.com/people/kaka2008/activities">知乎</a></li>
     </ul>
 </div>
+
+<!-- English Version -->
+<!-- <div class="en post-container">
+    <blockquote><p>Yet another iOS Developer. <br>
+    Yet another Life-long Student.</p></blockquote>
+
+    <p>Hey，I am<strong>Kaka2008</strong>，a programmer, live & work in wuhan,ever work in Beijing for 5 years</p>
+
+    <p></p>
+    
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://www.douban.com/people/weizhankui/">douban</a></li> 
+        <li><a href="https://www.zhihu.com/people/kaka2008/activities">zhihu</a></li>
+    </ul>
+</div> -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
 
 
 <!-- Gitalk 评论 start  -->

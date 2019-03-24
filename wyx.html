@@ -13,8 +13,6 @@ header-img: "img/wyx.jpeg"
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-
-    <!--copied from markdown -->
     <p id="show_p"></p>
 </div>
 
@@ -49,6 +47,7 @@ header-img: "img/wyx.jpeg"
 
     // handle render
     function _render(){
+        showresult();
         var _hash = window.location.hash;
         // en
         if(_hash == "#en"){
@@ -62,14 +61,14 @@ header-img: "img/wyx.jpeg"
             $zh.style.display = "block";
             $en.style.display = "none";
         }
-        showresult();
     }
 
     function showresult(){
         var now = new Date();
         var today = now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate();
-        var dayDiff = timeFn("2019-01-17");
-        var result = "今天是"+today+"，今天是卫禹心出生第"+dayDiff+"天";
+        var dayDiff = timeFn("2019-01-17 02:25:00");
+        var result = "今天是"+today+"，是卫禹心出生第"+dayDiff+"天";
+        console.log(result);
         document.getElementById("show_p").innerHTML = result;
     }
 

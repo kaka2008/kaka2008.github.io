@@ -1,9 +1,9 @@
 # Site settings
-title: By kaka2008
-SEOTitle: kaka2208的博客 | By kaka2008
+title: kaka2008
+SEOTitle: kaka2008的博客
 header-img: img/post-bg-desk.jpg
 email: weizhankui2008@gmail.com
-description: "Every failure is leading towards success."
+description: "首孝悌，次见闻。知某数，识某文"
 keyword: "kaka2008"
 url: "http://kaka2008.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,7 +11,7 @@ github_repo: "https://github.com/kaka2008/kaka2008.github.io/tree/master/img" # 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "首孝悌，次见闻。知某数，识某文"
 sidebar-avatar: /img/wyx.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
